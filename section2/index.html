@@ -6,10 +6,14 @@
   </head>
   <body>
     <div id="app">
-      <ol>
-        <!-- 要素名 + in + 表示に使う入れる -->
-        <li v-for="color in colors">{{ color }}</li>
-      </ol>
+      <ul>
+        <!-- value + in object -->
+        <li v-for="value in user">{{ value }}</li>
+      </ul>
+      <hr>
+      <ul>
+        <li v-for="(value, key) in user">{{ key}}：{{ value }}</li>
+      </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="js/main.js"></script>
