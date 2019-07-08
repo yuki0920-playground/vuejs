@@ -6,8 +6,10 @@
   </head>
   <body>
     <div id="app">
-      <!-- 属性のデータバインディング v-bind -->
-      <input type="text" v-bind:value="message" />
+      <!-- DOMの表示非表示を設定 -->
+      <p v-if="toggle">
+        Hello
+      </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="js/main.js"></script>
