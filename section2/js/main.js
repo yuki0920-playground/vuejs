@@ -1,12 +1,6 @@
 var app = new Vue ({
 	el: '#app',
 	data: {
-		now: ''
+		message: 'Hello Vue.js!',
 	},
-	methods: {
-		onclick: function(){
-			// alert('onclick!');
-			this.now = new Date().toLocaleString();
-		}
-	}
 })

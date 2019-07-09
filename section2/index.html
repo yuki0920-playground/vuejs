@@ -6,10 +6,14 @@
   </head>
   <body>
     <div id="app">
-      <button v-on:click="onclick">
-        Click!
-      </button>
-      {{ now }}
+      <p>
+        <input type="text" v-model="message">
+      </p>
+      <p>
+        <input type="text" v-model="message">
+      </p>
+      <!-- $obujectでオブジェクト取得 -->
+      <pre>{{ $data }}</pre>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="js/main.js"></script>
