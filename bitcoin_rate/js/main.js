@@ -11,8 +11,13 @@ var app = new Vue({
       // console.log(response.data.bpi.USD.rate_float)
       this.bpi = response.data.bpi
     }.bind(this))
-    .catch(function(erro){
-      console.log(erro)
+    .catch(function(error){
+      console.log(error)
     })
+  },
+  filters: {
+    currencyDecimal(value) {
+      return value.toFixed(2)
+    }
   }
 })
