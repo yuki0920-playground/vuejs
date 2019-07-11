@@ -10,6 +10,10 @@ var app = new Vue({
       };
       this.todos.push(todo);
       this.newItem = ''
+    },
+    deleteItem: function(index){
+      // alert(index); #index確認のためのalert
+      this.todos.splice(index, 1)
     }
   },
   data: {
