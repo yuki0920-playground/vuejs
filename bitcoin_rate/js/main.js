@@ -2,7 +2,8 @@ var app = new Vue({
   el: "#app",
   data: {
     bpi: null,
-    hasError: false
+    hasError: false,
+    loading: true
   },
   // インスタンスがマウントされた後に呼び出される
   mounted: function() {
@@ -15,6 +16,9 @@ var app = new Vue({
     .catch(function(error){
       console.log(error)
       this.hasError = true
+    }.bind(this))
+    .finally(function(){
+      this.loading = false
     }.bind(this))
   },
   filters: {

@@ -8,16 +8,41 @@
     <body>
       <div id="app">
         <h2>Bitcoin Rate</h2>
-        <section v-if="hasError">Error</section>
+        <section v-if="hasError">
+          Error.
+        </section>
         <section v-else>
-          <ul v-cloak>
-            <!-- valueをrate、keyをrateと指定 -->
-            <li v-for="(rate, currency) in bpi">
-              {{ currency }} : {{ rate.rate_float |  | currencyDecimal }}
-            </li>
-          </ul>
+          <div v-if="loading">Loading...</div>
+          <div v-else>
+            <ul v-cloak>
+              <!-- valueをrate、keyをrateと指定 -->
+              <li v-for="(rate, currency) in bpi">
+                {{ currency }} : {{ rate.rate_float |  | currencyDecimal }}
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
+      <div id="app">
+          <h2>
+          Bitcoin Price
+          </h2>
+          <section v-if="hasError">
+            Error.
+          </section>
+          <section v-else>
+            <div v-if="loading">
+            Loading...
+            </div>
+            <div v-else>
+              <ul v-cloak>
+                <li v-for="(rate, currency) in bpi">
+                  {{ currency }} : {{ rate.rate_float | currencyDecimal }}
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>        
       <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
       <!-- main.jsより先に読み込む -->
       <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
