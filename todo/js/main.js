@@ -4,5 +4,8 @@ var app = new Vue({
     addItem: function(event){
       alert();
     }
+  },
+  data: {
+    newItem: ''
   }
 })
