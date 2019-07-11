@@ -14,7 +14,9 @@
       </form>
       <ul>
         <li v-for="todo in todos">
-          <input type="checkbox" v-model="todo.isDone"><span>{{ todo.item }}</span></li>
+          <input type="checkbox" v-model="todo.isDone">
+          <span v-bind:class="{done: todo.isDone}">{{ todo.item }}</span>
+        </li>
       </ul>
       <pre>{{ $data }}</pre>
     </div>
