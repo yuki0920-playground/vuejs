@@ -6,8 +6,10 @@
   </head>
   <body>
     <div id="app">
-      <!-- 要素と子要素のコンパイルがスキップされマスタッシュタグが出力される -->
-      <p v-pre>
+      <p>
+        {{ message }}
+      </p>
+      <p v-html="message">
         {{ message }}
       </p>
     </div>
