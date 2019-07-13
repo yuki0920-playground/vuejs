@@ -1,18 +1,13 @@
 var app = new Vue ( {
 	el: '#app',
-	data: {
-		message: 'Hello Vue.js!'
-	},
-	// 複雑な処理をjsに切り出すためのプロパティ
 	computed: {
-		reversedMessage: function(){
-			return this.message.split('').reverse().join('')
+		computedNumber: function(){
+			return Math.random()
 		}
 	},
-	// メソッドのため()が必要
 	methods: {
-		reversedMessageMethod: function(){
-			return this.message.split('').reverse().join('')
+		methodsNumber: function(){
+			return Math.random()
 		}
 	}
 })
