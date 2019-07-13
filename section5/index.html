@@ -6,8 +6,18 @@
   </head>
   <body>
     <div id="app">
-      <p v-text="message">
-        <!-- {{ message }} -->
+      <p>
+        {{ message }}
+      </p>
+      <p>
+        {{ number + 1 }}
+      </p>
+      <p>
+        {{ message.split('').reverse().join('') }}
+      </p>
+      <p>
+        <!-- 条件式は三項演算子のみ可能 -->
+        {{ ok ? 'Yes' : 'No' }}
       </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
