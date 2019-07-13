@@ -6,12 +6,9 @@
   </head>
   <body>
     <div id="app">
-      <h2>Mustasche</h2>
       <p>
-        {{ price | numberFormat }}
+        {{ jpyPrice | toUSD | numberFormat }}
       </p>
-      <h2>v-vind</h2>
-      <input type="text" v-bind:value="price | numberFormat">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="js/main.js"></script>
