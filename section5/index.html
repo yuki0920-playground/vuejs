@@ -6,19 +6,12 @@
   </head>
   <body>
     <div id="app">
+      <h2>Mustasche</h2>
       <p>
-        {{ message }}
+        {{ price | numberFormat }}
       </p>
-      <p>
-        {{ number + 1 }}
-      </p>
-      <p>
-        {{ message.split('').reverse().join('') }}
-      </p>
-      <p>
-        <!-- 条件式は三項演算子のみ可能 -->
-        {{ ok ? 'Yes' : 'No' }}
-      </p>
+      <h2>v-vind</h2>
+      <input type="text" v-bind:value="price | numberFormat">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="js/main.js"></script>
