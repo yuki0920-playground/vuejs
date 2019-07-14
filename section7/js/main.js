@@ -18,7 +18,7 @@ var app = new Vue ( {
 			 },
 			//  配列colors配下のcolorが変更されるたび呼び出される
 			 deep: true,
-			//  初期読み込み時にフックする
+			 初期読み込み時にフックする
 			 immediate: true
 		 }
 	 }
