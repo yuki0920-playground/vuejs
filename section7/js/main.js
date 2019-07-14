@@ -17,7 +17,9 @@ var app = new Vue ( {
 					JSON.stringify(oldValue, null, '\t'))
 			 },
 			//  配列colors配下のcolorが変更されるたび呼び出される
-			 deep: true
+			 deep: true,
+			//  初期読み込み時にフックする
+			 immediate: true
 		 }
 	 }
 })
