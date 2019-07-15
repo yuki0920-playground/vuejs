@@ -3,13 +3,19 @@ var app = new Vue ( {
 	data: {
 		items: null,
 		keyword: '',
-		message: 'hello vue.js',
+		message: '',
 	},
 	watch: {
+		keyword: function(newKeyword, oldKeyword){
+			// console.log(newKeyword)
+			this.message = 'Waiting for you to stop typing...'
+			this.debouncedGetAnswer()
+		}
 	},
 	created: function(){
-		this.keyword = 'JavaScript'
-		this.getAnswer()
+		// this.keyword = 'JavaScript'
+		// this.getAnswer()
+		this.debouncedGetAnswer = _.debounce(this.getAnswer, 1000)
 	},
 	methods: {
 		getAnswer: function(){
