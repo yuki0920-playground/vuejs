@@ -7,8 +7,7 @@
   <body>
     <div id="app">
       <p>
-        <!-- {クラス名: プロパティ名 } -->
-        Hello <span class="bg-gray text-blue" v-bind:class="{large: isLarge, 'text-danger': hasError}">Vue.js!</span>
+        Hello <span v-bind:class="[largeClass, dangerClass]">Vue.js!</span>
       </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
