@@ -6,14 +6,8 @@
   </head>
   <body>
     <div id="app">
-      <!-- [Ctrl + c]でclear -->
-      <input type="text" v-on:keyup.ctrl.67="clear"  v-model="message">
-      <div v-on:click.shift="clickHandler">
-        Click me!
-      </div>
-      <p>
-          {{ message }}
-        </p>
+      <button v-on:click="clickHandler">Click</button>
+      <button @click="clickHandler">Click</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="js/main.js"></script>
