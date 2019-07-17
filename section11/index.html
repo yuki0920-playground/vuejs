@@ -9,8 +9,10 @@
       <p>
         {{ counter }}
       </p>
-      <!-- v-on:clickでボタンのクリックを補足/""内に処理を記述 -->
-      <button v-on:click="counter++">Click!</button>
+      <!-- インラインメソッドハンドラ -->
+      <button v-on:click="counter++">Click1</button>
+      <!-- メソッドイベントハンドラ -->
+      <button v-on:click="clickHandler">Click2</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="js/main.js"></script>
