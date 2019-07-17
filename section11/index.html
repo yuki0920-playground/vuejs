@@ -1,0 +1,18 @@
+<html lang="ja">
+  <head>
+     <meta charaset="utf-8">
+     <title>Hello Vue.js</title>
+     <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        {{ counter }}
+      </p>
+      <!-- v-on:clickでボタンのクリックを補足/""内に処理を記述 -->
+      <button v-on:click="counter++">Click!</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
