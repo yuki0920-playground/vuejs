@@ -6,14 +6,14 @@
   </head>
   <body>
     <div id="app">
-      <input type="radio" id="red" value="Red" value="color" v-model="color">
-      <label for="red">Red</label>
-      <input type="radio" id="green" value="Green" value="color" v-model="color">
-      <label for="green">Green</label>
-      <input type="radio" id="blue" value="Blue" value="color" v-model="color">
-      <label for="blue">Blue</label>
+      <select v-model="selected">
+        <option disabled value="">Please select one</option>
+        <option>Red</option>
+        <option>Green</option>
+        <option>Blue</option>
+      </select>
       <p>
-        {{ color }}
+        {{ selected }}
       </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
