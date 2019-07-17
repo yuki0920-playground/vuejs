@@ -1,0 +1,21 @@
+<html lang="ja">
+  <head>
+      <meta charaset="utf-8">
+      <title>Hello Vue.js</title>
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        {{ message }}
+      </p>
+      <pre>
+        {{ $data }}
+      </pre>
+      <!-- 双方向データバインディングv-model -->
+      <input type="text" v-model="message">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
