@@ -1,16 +1,15 @@
-// 第1引数にコンポーネント名、第2引数にテンプレート
-// Vue.component('hello-component', {
-// 	template: '<p>Hello</p>'
-// })
-
-// 変数にテンプレートを代入し、componentプロパティで呼び出す
-var helloComponent = {
-	template: '<p>Hello</p>'
-}
-
+Vue.component('button-counter', {
+	data: function(){
+		// dataのオブジェクトは関数
+		// data:{count:0}ではない
+		return {
+			count: 0
+		}
+	},
+	// template: '<button v-on:click="count++">{{ count }}</button>'
+	// divで囲うとspanタグbuttonタグなど複数のタグを使用できる
+	template: '<div><span>count:</span><button v-on:click="count++">{{ count }}</button></div>'
+})
 var app = new Vue ( {
 	el: '#app',
-	components: {
-		'hello-component': helloComponent
-	}
 })
