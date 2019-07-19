@@ -19,7 +19,7 @@ var todoStorage = {
 const app = new Vuew({
   el: '#app',
   data: {
-
+    todos: []
   },
   methods: {
 
