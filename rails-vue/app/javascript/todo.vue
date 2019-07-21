@@ -10,15 +10,27 @@
     </form>
     <pre>{{ $data }}</pre>
     <ul>
-      <!-- 第1引数value,第2引数value -->
-      <li v-for="(todo, index) in todos">
-        <!-- 入力の真偽値を双方向データバインディング -->
-        <input type="checkbox" v-model="todo.isDone">
-        <!-- 動的にクラスを設定 -->
-        <span v-bind:class="{ done: todo.isDone }">{{ todo.item }}</span>
-        <!-- クリック時にindexを渡した上でイベントを呼ぶ -->
-        <button v-on:click="deleteItem(index)">Delete</button>
-      </li>
+      <table>
+        <tr>
+          <th>タスク名</th>
+          <th>削除ボタン</th>
+        </tr>
+        <!-- 第1引数value,第2引数value -->
+        <tr v-for="todo in todos">
+          <td>
+            <!-- 入力の真偽値を双方向データバインディング -->
+            <input type="checkbox" v-model="todo.isDone">
+            <!-- 動的にクラスを設定 -->
+            <span v-bind:class="{ done: todo.isDone }">{{ todo.item }}</span>
+          </td>
+          <td>
+            <!-- クリック時にindexを渡した上でイベントを呼ぶ -->
+            <button v-on:click="deleteItem(index)">Delete</button>
+          </td>
+        </tr>
+        <td>
+        </td>
+      </table>
     </ul>
   </div>
 </template>
@@ -41,7 +53,7 @@ export default {
       // todo.itemでitemを取得
       var todo = {
         item: this.newItem,
-        isDone: false
+        isDone: false,
       };
       // 配列todosに定義したtodoを追加
       this.todos.push(todo);
@@ -50,7 +62,7 @@ export default {
     deleteItem: function(index) {
       alert(index);
       this.todos.splice(index, 1)
-    }
+    },
   }
 }
 </script>
