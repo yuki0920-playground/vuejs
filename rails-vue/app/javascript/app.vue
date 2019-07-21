@@ -8,7 +8,7 @@
 export default {
   data: function () {
     return {
-      message: "Hello Vue!",
+      message: "Hello Vue!"
     }
   }
 }
@@ -20,4 +20,3 @@ p {
   text-align: center;
 }
 </style>
-
